@@ -1,8 +1,8 @@
-# README #
+## README
 
-# Jeux d'aventure en python
-Nécessite Python >= 3.10
+Adventure game in Python (in french for now)
+Need Python >= 3.10
 
 Auteur : eanyx (olivier.michel.92@gmail.com)  
-Version 1.0 - 11 mai 2024 - release initiale  
+Version 1.0 - 25 may 2024 - initial release  
 
