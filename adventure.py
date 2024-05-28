@@ -128,6 +128,12 @@ while True:
                 pomme = tableau[3][1]
                 vie = int(tableau[4][1])
 
+	case "regarder":
+		if (pos=="foret")
+			print ("Vous êtes dans une forêt")
+		if (pos=="riviere")
+			print("Vous êtes devant une rivière")
+
         case _:
             print ("Verbe non trouvé, veuillez recommencer")
 
