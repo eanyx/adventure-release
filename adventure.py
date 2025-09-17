@@ -114,6 +114,8 @@ while True:
                     print ("Vous vous allongez sur le canapé et vous vous endormez")
                 else:
                     print("il fait trop froid")
+            elif (pos=="foret"):
+                print ("Il y a des animaux sauvages, vous ne pouvez dormir ici")
             else:
                 print("Vous ne pouvez dormir ici")
 
