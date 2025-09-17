@@ -6,6 +6,8 @@ briquet = "0"
 pomme = "0"
 vie = 5
 cheminee_allumee = False
+diamant = "0"
+coquillage="0"
 
 print ("Vous êtes sur un bateau qui vient de couler, vous vous retrouvez sur une plage déserte.")
 
@@ -18,24 +20,34 @@ while True:
             print("Choix possible: dormir, boire, manger, creuser, allumer, ouvrir, descendre, monter, aller, regarder, prendre, sauvegarder, restaurer")
 
         case "inventaire" | "inv":
-            print ("Vous avez " + cle + " clé")
+            print (cle + " clé")
             print (briquet + " briquet")
             print(pomme + " pomme")
-            print("Vie = " + str(vie) + " points")
-
+            print(str(vie) + " points de vie")
+            print(diamant +  " diamant")
+            print(coquillage + " coquillage")
         case "creuser":
             if (pos == "plage"):
                 print ("Vous creusez dans le sable")
                 print ("Vous trouvez une clé")
                 cle = "1"
+            elif (pos=="foret"):
+                print("Vous trouvez un diamant")
+                diamant = "1"
+            elif (pos=="riviere"):
+                print("vous creusez dans la boue")
+                print("Vous trouvez un coquillage")
+                coquillage="1"
             else:
                 print ("Vous ne pouvez creuser ici")
+
+
 
         case "aller":
             direction = input ("Dans quelle direction : N|S|O|E ? ")
             match direction:
                 case "N":
-                    print ("Vous allez vers un plage")
+                    print ("Vous allez vers une plage")
                     pos = "plage"
                 case "S":
                     print ("Vous allez vers une rivière")
@@ -92,7 +104,8 @@ while True:
         case "boire":
             if (pos == "riviere"):
                 print("Vous vous désaltérez")
-                vie = vie + 1
+                if (vie < 10):
+                    vie = vie + 1
             else:
                 print("Il n'y a rien à boire ici")
         case "dormir":
@@ -127,13 +140,6 @@ while True:
                 briquet = tableau[2][1]
                 pomme = tableau[3][1]
                 vie = int(tableau[4][1])
-
-	case "regarder":
-		if (pos=="foret")
-			print ("Vous êtes dans une forêt")
-		if (pos=="riviere")
-			print("Vous êtes devant une rivière")
-
-        case _:
-            print ("Verbe non trouvé, veuillez recommencer")
-
+        case "regarder":
+            if (pos == "foret"):
+                print("Voici une très belle forêt. Verdoyante.")
