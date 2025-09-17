@@ -116,6 +116,10 @@ while True:
                     print("il fait trop froid")
             elif (pos=="foret"):
                 print ("Il y a des animaux sauvages, vous ne pouvez dormir ici")
+            elif (pos=="plage"):
+                print ("La plage est calme vous pouvez dormir ici")
+                if ( vie < 10):
+                    vie = vie +1
             else:
                 print("Vous ne pouvez dormir ici")
 
