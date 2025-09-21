@@ -35,7 +35,7 @@ while True:
                 print("Vous trouvez un diamant")
                 diamant = "1"
             elif (pos=="riviere"):
-                print("vous creusez dans la boue")
+                print("Vous creusez dans la boue")
                 print("Vous trouvez un coquillage")
                 coquillage="1"
             else:
@@ -114,11 +114,13 @@ while True:
                     print ("Vous vous allongez sur le canapé et vous vous endormez")
                 else:
                     print("il fait trop froid")
-            elif (pos=="foret"):
+
+            if (pos == "foret"):
                 print ("Il y a des animaux sauvages, vous ne pouvez dormir ici")
-            elif (pos=="plage"):
+
+            if (pos == "plage"):
                 print ("La plage est calme vous pouvez dormir ici")
-                if ( vie < 10):
+                if ( vie < 10 ):
                     vie = vie +1
             else:
                 print("Vous ne pouvez dormir ici")
